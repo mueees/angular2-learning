@@ -5,7 +5,6 @@ import {HttpModule} from '@angular/http';
 
 import {DateComponent} from './components/date/date.component'
 import {FeedbackComponent} from './components/feedback/feedback.component'
-import {YoutubeComponent} from './components/youtube/youtube.component'
 import {SimpleHttpComponent} from './components/simpleHttp/simpleHttp.component'
 
 @NgModule({
@@ -17,13 +16,11 @@ import {SimpleHttpComponent} from './components/simpleHttp/simpleHttp.component'
     declarations: [
         DateComponent,
         FeedbackComponent,
-        YoutubeComponent,
         SimpleHttpComponent
     ],
     exports: [
         DateComponent,
         FeedbackComponent,
-        YoutubeComponent,
         SimpleHttpComponent
     ],
     providers: []

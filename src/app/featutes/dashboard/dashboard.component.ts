@@ -9,6 +9,8 @@ import {Component} from '@angular/core';
         <feedback></feedback>
         <hr/>
         <simple-http-component></simple-http-component>
+        <hr/>
+        <youtube></youtube>
     `
 })
 export class DashboardComponent {
