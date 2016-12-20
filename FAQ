@@ -1,0 +1,14 @@
+1. onInit vs constructor
+
+
+2. How to read this?
+class Search {
+    loading: EventEmitter<boolean> = new EventEmitter<boolean>();
+}
+
+3. Describe Angular 2 lifecycle callback?
+
+4. Typescript types ?
+- Array
+    number[]
+    Array<number>

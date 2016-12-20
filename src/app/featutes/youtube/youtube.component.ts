@@ -5,6 +5,9 @@ import {YoutubeService} from './youtube.service';
     selector: 'youtube',
     template: `
         <b>Youtube Component!</b>
+        <hr/>
+
+        <search-box></search-box>
     `,
 
     /**
@@ -15,11 +18,13 @@ import {YoutubeService} from './youtube.service';
     ]
 })
 export class YoutubeComponent {
-    youtubeService: YoutubeService;
+    youtubeService:YoutubeService;
 
-    constructor(youtubeService: YoutubeService) {
+    constructor(youtubeService:YoutubeService) {
         console.log('Youtube Component constructor');
 
         this.youtubeService = youtubeService;
+
+        this.youtubeService.search('fun');
     }
 }
