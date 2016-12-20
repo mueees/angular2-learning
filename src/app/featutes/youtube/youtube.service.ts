@@ -32,9 +32,12 @@ export class YoutubeService {
 
         return this.http.get(url).map((response:Response) => {
             return (<any>response.json()).items.map((item => {
-                console.log(item);
-
-                return new YoutubeSearchResultModel(item);
+                return new YoutubeSearchResultModel({
+                    title: item.snippet.title,
+                    description: item.snippet.description,
+                    thumbnailUrl: item.snippet.thumbnails.medium.url,
+                    videoUrl: `https://www.youtube.com/watch?v=${item.id.videoId}`
+                });
             }));
         });
     }

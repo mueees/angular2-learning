@@ -1,14 +1,46 @@
-1. onInit vs constructor
+-----------------------------
+        QUESTIONS
+-----------------------------
+1. Angular: How to get element in component constructor?
 
+Answer:
+constructor(private el: ElementRef) {}
 
-2. How to read this?
+2. Describe Angular 2 lifecycle callback?
+Answer: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
+
+3. onInit vs constructor
+
+4. How to read this?
 class Search {
+    name: string;
+    age: number;
+
     loading: EventEmitter<boolean> = new EventEmitter<boolean>();
 }
 
-3. Describe Angular 2 lifecycle callback?
-
-4. Typescript types ?
+5. Typescript types ?
 - Array
     number[]
     Array<number>
+
+6. How to test services?
+
+7. How to mock the Http requests?
+
+-----------------------------
+        ANGULAR 2
+-----------------------------
+
+
+-----------------------------
+        TYPESCRIPT
+-----------------------------
+1. Generic function
+Function identity takes 'generic' type
+    - That type function should return
+    - name argument should be the same type as generic
+
+function identity<T>(name: T): T{
+
+}

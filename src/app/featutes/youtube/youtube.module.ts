@@ -1,13 +1,18 @@
 import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import {YoutubeComponent} from './youtube.component';
 import {SearchBoxComponent} from './components/search-box/search-box.component';
+import {SearchResultComponent} from './components/search-result/search-result.component';
 
 @NgModule({
-    imports: [],
+    imports: [
+        BrowserModule
+    ],
     declarations: [
         YoutubeComponent,
-        SearchBoxComponent
+        SearchBoxComponent,
+        SearchResultComponent
     ],
 
     exports: [
