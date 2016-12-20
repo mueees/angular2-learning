@@ -8,6 +8,5 @@ import {Component} from '@angular/core';
 
     outputs: ['loading', 'results']
 })
-export class SearchBoxComponent implements OnInit {
-
+export class SearchBoxComponent {
 }
