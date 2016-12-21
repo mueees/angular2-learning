@@ -1,61 +1,57 @@
 -----------------------------
-        QUESTIONS
+        ANGULAR 2
 -----------------------------
-1. Angular: How to get element in component constructor?
 
+1. Why HTML5 is preferred?
+
+2. What is history.pushState method?
+Answer: https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries
+
+3. Why we should add BrowserModule?
+
+4. Any other Modules for another environment?
+
+5. Which browsers don't support HTML5 mode routing?
+
+6. How to mock the Http requests?
+
+7. How to test services?
+
+8. Angular: How to get element in component constructor?
 Answer:
 constructor(private el: ElementRef) {}
 
-2. Describe Angular 2 lifecycle callback?
+9. Describe Angular 2 lifecycle callback?
 Answer: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
 
-3. onInit vs constructor
-
-4. How to read this?
-class Search {
-    name: string;
-    age: number;
-
-    loading: EventEmitter<boolean> = new EventEmitter<boolean>();
-}
-
-5. Typescript types ?
-- Array
-    number[]
-    Array<number>
-
-6. How to test services?
-
-7. How to mock the Http requests?
-
-8. Which browsers don't support HTML5 mode routing?
-
-9. За что отвечает BrowserModule?
-
-10. What is history.pushState method?
-Answer: https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries
-
-11. Why HTML5 is preferred?
-
-12. rxjs What does 'switchMap' method do?
-
------------------------------
-        ANGULAR 2
------------------------------
+10. onInit vs constructor
 
 -----------------------------
         RXJS
 -----------------------------
+1. What is RxJS?
 
+2. Purpose of RxJs?
+
+3. Basic methods
+    - switchMap
 
 -----------------------------
         TYPESCRIPT
 -----------------------------
-1. Generic function
+1. Talk about Generic types
 Function identity takes 'generic' type
     - That type function should return
     - name argument should be the same type as generic
 
 function identity<T>(name: T): T{
 
+}
+
+2. How to read this?
+class Search {
+    name: string;
+    age: number;
+
+    loading: EventEmitter<boolean> = new EventEmitter<boolean>();
 }
