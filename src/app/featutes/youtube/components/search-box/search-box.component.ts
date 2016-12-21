@@ -11,11 +11,13 @@ import {Observable} from 'rxjs';
         <input autofocus placeholder="Search" type="text"/>
     `,
 
-    outputs: ['loading', 'results']
+    outputs: ['loading', 'results', 'search']
 })
 export class SearchBoxComponent implements OnInit {
+    search:EventEmitter<string> = new EventEmitter<string>();
     loading:EventEmitter<boolean> = new EventEmitter<boolean>();
     results:EventEmitter<YoutubeSearchResultModel[]> = new EventEmitter<YoutubeSearchResultModel[]>();
+    searchQuery:string;
 
     constructor(public youtubeService:YoutubeService,
                 private el:ElementRef) {
@@ -25,7 +27,11 @@ export class SearchBoxComponent implements OnInit {
 
     ngOnInit() {
         Observable.fromEvent(this.el.nativeElement, 'keyup')
-            .map((e:any) => e.target.value)
+            .map((e:any) => {
+                this.searchQuery = e.target.value;
+
+                return e.target.value;
+            })
             .filter((text:string) => text.length > 1)
             .debounceTime(250)
             .do(() => this.loading.next(true))
@@ -33,6 +39,7 @@ export class SearchBoxComponent implements OnInit {
             .switch()
             .subscribe(
             (results:YoutubeSearchResultModel[]) => { // success
+                this.search.emit(this.searchQuery);
                 this.loading.emit(false);
                 this.results.emit(results);
             },

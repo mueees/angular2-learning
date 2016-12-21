@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 
 import {YoutubeService} from './youtube.service';
 
@@ -9,8 +9,9 @@ import {YoutubeSearchResultModel} from './youtube-search-result.model';
     selector: 'youtube',
     template: `
         <h1>Youtube Component!</h1>
+        <div *ngIf="previousSearchQuery">Previous search: "{{previousSearchQuery}}"</div>
 
-        <search-box (loading)="onLoading($event)" (results)="updateResults($event)"></search-box>
+        <search-box (search)="onSearch($event)" (results)="updateResults($event)"></search-box>
         <hr/>
 
         <ul>
@@ -26,23 +27,31 @@ import {YoutubeSearchResultModel} from './youtube-search-result.model';
     providers: []
 })
 export class YoutubeComponent {
+    searchQuery:string;
+    previousSearchQuery:string;
     youtubeService:YoutubeService;
     videos:YoutubeSearchResultModel[];
 
-    constructor(youtubeService:YoutubeService, private router:Router) {
+    constructor(youtubeService:YoutubeService,
+                private router:Router,
+                private route:ActivatedRoute) {
         this.youtubeService = youtubeService;
         this.router = router;
+
+        this.previousSearchQuery = this.route.snapshot.params['search'];
     }
 
     updateResults(results:YoutubeSearchResultModel[]):void {
         this.videos = results;
     }
 
-    onLoading(loadingStatus:boolean):void {
-        console.log(loadingStatus);
+    onSearch(s:string):void {
+        this.previousSearchQuery = '';
+
+        this.searchQuery = s;
     }
 
     onVideoSelect(videoId) {
-        this.router.navigate(['/youtube', videoId]);
+        this.router.navigate(['/youtube', videoId, {search: this.searchQuery}]);
     }
 }

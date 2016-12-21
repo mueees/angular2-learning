@@ -1,4 +1,11 @@
 -----------------------------
+        GENERAL
+-----------------------------
+1. What is Matrix URIs ?
+Look: https://www.w3.org/DesignIssues/MatrixURIs.html
+Look: http://stackoverflow.com/questions/2048121/url-matrix-parameters-vs-request-parameters
+
+-----------------------------
         ANGULAR 2
 -----------------------------
 
@@ -25,6 +32,8 @@ constructor(private el: ElementRef) {}
 Answer: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
 
 10. onInit vs constructor
+
+11. What is @HostBinding decorator ?
 
 -----------------------------
         RXJS
