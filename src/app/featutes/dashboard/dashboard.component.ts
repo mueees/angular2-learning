@@ -4,7 +4,6 @@ import {Component} from '@angular/core';
     selector: 'dashboard',
     template: `
         <h1>Dashboard</h1>
-        <youtube></youtube>
     `
 })
 export class DashboardComponent {

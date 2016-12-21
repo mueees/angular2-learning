@@ -1,9 +1,9 @@
-export class YoutubeSearchResultModel {
+export class YoutubeVideoModel {
     public title:string;
+    public videoId:string;
     public description:string;
     public videoUrl:string;
     public thumbnailUrl:string;
-    public videoId:string;
 
     constructor(obj?:any) {
         this.title = obj && obj.title || null;

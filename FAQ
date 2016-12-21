@@ -28,8 +28,23 @@ class Search {
 
 7. How to mock the Http requests?
 
+8. Which browsers don't support HTML5 mode routing?
+
+9. За что отвечает BrowserModule?
+
+10. What is history.pushState method?
+Answer: https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries
+
+11. Why HTML5 is preferred?
+
+12. rxjs What does 'switchMap' method do?
+
 -----------------------------
         ANGULAR 2
+-----------------------------
+
+-----------------------------
+        RXJS
 -----------------------------
 
 
