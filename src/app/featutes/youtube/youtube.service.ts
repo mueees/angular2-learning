@@ -1,9 +1,8 @@
-import {Injectable, Inject} from '@angular/core';
-import {Http, Response} from '@angular/http';
-import {Observable} from 'rxjs';
-
-import {YoutubeSearchResultModel} from './youtube-search-result.model';
-import {YoutubeVideoModel} from './youtube-video.model';
+import {Injectable, Inject} from "@angular/core";
+import {Http, Response} from "@angular/http";
+import {Observable} from "rxjs";
+import {YoutubeSearchResultModel} from "./youtube-search-result.model";
+import {YoutubeVideoModel} from "./youtube-video.model";
 
 @Injectable()
 export class YoutubeService {

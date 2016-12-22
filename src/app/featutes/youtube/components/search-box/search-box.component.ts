@@ -1,9 +1,7 @@
-import {Component, EventEmitter, ElementRef, OnInit} from '@angular/core';
-
-import {YoutubeService} from '../../youtube.service';
-import {YoutubeSearchResultModel} from '../../youtube-search-result.model';
-
-import {Observable} from 'rxjs';
+import {Component, EventEmitter, ElementRef, OnInit} from "@angular/core";
+import {YoutubeService} from "../../youtube.service";
+import {YoutubeSearchResultModel} from "../../youtube-search-result.model";
+import {Observable} from "rxjs";
 
 @Component({
     selector: 'search-box',

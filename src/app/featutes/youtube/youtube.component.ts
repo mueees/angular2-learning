@@ -1,9 +1,7 @@
-import {Component} from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
-
-import {YoutubeService} from './youtube.service';
-
-import {YoutubeSearchResultModel} from './youtube-search-result.model';
+import {Component} from "@angular/core";
+import {Router, ActivatedRoute} from "@angular/router";
+import {YoutubeService} from "./youtube.service";
+import {YoutubeSearchResultModel} from "./youtube-search-result.model";
 
 @Component({
     selector: 'youtube',

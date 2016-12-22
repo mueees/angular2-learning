@@ -1,5 +1,5 @@
-import {Component, EventEmitter} from '@angular/core';
-import {YoutubeSearchResultModel} from '../../youtube-search-result.model';
+import {Component, EventEmitter} from "@angular/core";
+import {YoutubeSearchResultModel} from "../../youtube-search-result.model";
 
 @Component({
     selector: 'search-result',

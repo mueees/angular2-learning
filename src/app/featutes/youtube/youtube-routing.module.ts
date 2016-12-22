@@ -1,9 +1,8 @@
-import {NgModule}             from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-
+import {NgModule} from "@angular/core";
+import {RouterModule, Routes} from "@angular/router";
 // Component
-import {YoutubeComponent} from './youtube.component';
-import {YoutubeVideoInfoComponent} from './youtube-video-info.component';
+import {YoutubeComponent} from "./youtube.component";
+import {YoutubeVideoInfoComponent} from "./youtube-video-info.component";
 
 // Route
 const youtubeRoutes: Routes = [

@@ -1,14 +1,8 @@
-import {
-    Component, OnInit, HostBinding,
-    trigger, transition, animate,
-    style, state
-} from '@angular/core';
-
-import {Router, ActivatedRoute, Params} from '@angular/router';
-import 'rxjs/add/operator/switchMap';
-
-import {YoutubeService} from './youtube.service';
-import {YoutubeVideoModel} from './youtube-video.model';
+import {Component, OnInit, HostBinding, trigger, transition, animate, style, state} from "@angular/core";
+import {Router, ActivatedRoute, Params} from "@angular/router";
+import "rxjs/add/operator/switchMap";
+import {YoutubeService} from "./youtube.service";
+import {YoutubeVideoModel} from "./youtube-video.model";
 
 @Component({
     selector: 'youtube-video-info',

@@ -1,6 +1,5 @@
-import {Component} from '@angular/core';
-
-import {FeedbackModel} from './feedback.model';
+import {Component} from "@angular/core";
+import {FeedbackModel} from "./feedback.model";
 
 @Component({
     selector: 'feedback',

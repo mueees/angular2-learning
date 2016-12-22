@@ -1,16 +1,14 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {YoutubeRoutingModule} from './youtube-routing.module';
-import {HttpModule} from '@angular/http';
-
+import {NgModule} from "@angular/core";
+import {CommonModule} from "@angular/common";
+import {YoutubeRoutingModule} from "./youtube-routing.module";
+import {HttpModule} from "@angular/http";
 // Components
-import {YoutubeComponent} from './youtube.component';
-import {YoutubeVideoInfoComponent} from './youtube-video-info.component';
-import {SearchBoxComponent} from './components/search-box/search-box.component';
-import {SearchResultComponent} from './components/search-result/search-result.component';
-
+import {YoutubeComponent} from "./youtube.component";
+import {YoutubeVideoInfoComponent} from "./youtube-video-info.component";
+import {SearchBoxComponent} from "./components/search-box/search-box.component";
+import {SearchResultComponent} from "./components/search-result/search-result.component";
 // Services
-import {YoutubeService} from './youtube.service';
+import {YoutubeService} from "./youtube.service";
 
 @NgModule({
     imports: [
