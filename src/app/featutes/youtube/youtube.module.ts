@@ -9,6 +9,7 @@ import {SearchBoxComponent} from "./components/search-box/search-box.component";
 import {SearchResultComponent} from "./components/search-result/search-result.component";
 // Services
 import {YoutubeService} from "./youtube.service";
+import {YoutubeInfoResolve} from "./youtube-info-resolve.service";
 
 @NgModule({
     imports: [
@@ -21,7 +22,6 @@ import {YoutubeService} from "./youtube.service";
         YoutubeVideoInfoComponent,
         SearchBoxComponent,
         SearchResultComponent
-
     ],
 
     /**
@@ -29,6 +29,7 @@ import {YoutubeService} from "./youtube.service";
      * */
     providers: [
         YoutubeService,
+        YoutubeInfoResolve,
         {
             provide: 'YOUTUBE_API_KEY',
             useValue: 'AIzaSyC9MDCXAHRm2w0obmCjiDJtTvaHaM6DwYY'

@@ -1,5 +1,5 @@
 import {Component, OnInit, HostBinding, trigger, transition, animate, style, state} from "@angular/core";
-import {Router, ActivatedRoute, Params} from "@angular/router";
+import {Router, ActivatedRoute} from "@angular/router";
 import "rxjs/add/operator/switchMap";
 import {YoutubeService} from "./youtube.service";
 import {YoutubeVideoModel} from "./youtube-video.model";
@@ -67,13 +67,18 @@ export class YoutubeVideoInfoComponent implements OnInit {
 
         // alternative way
         // this.route.snapshot.params['videoId'];
-        this.route.params
-            .subscribe((params: Params) => {
-                this.searchQuery = params['search'];
+        /*this.route.params
+         .subscribe((params: Params) => {
+         this.searchQuery = params['search'];
 
-                this.youtubeService.getVideoInfo(params['videoId']).subscribe((video: YoutubeVideoModel) => {
-                    this.video = video;
-                });
+         this.youtubeService.getVideoInfo(params['videoId']).subscribe((video: YoutubeVideoModel) => {
+         this.video = video;
+         });
+         });*/
+
+        this.route.data
+            .subscribe((data: {video: YoutubeVideoModel}) => {
+                this.video = data.video;
             });
     }
 
@@ -92,5 +97,10 @@ export class YoutubeVideoInfoComponent implements OnInit {
 
     @HostBinding('style.position') get position() {
         return 'absolute';
+    }
+
+    // rewrite logic for route deactivation
+    canDeactivate() {
+        return true;
     }
 }

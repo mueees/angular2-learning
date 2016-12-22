@@ -39,7 +39,8 @@ Answer: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
 
 12. ActivatedRoute vs Router services
 
-13.
+13. Could directive from module A use http service without importing it if
+module B already imported HttpModule?
 
 -----------------------------
         RXJS
