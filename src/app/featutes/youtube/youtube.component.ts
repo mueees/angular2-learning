@@ -27,25 +27,25 @@ import {YoutubeSearchResultModel} from './youtube-search-result.model';
     providers: []
 })
 export class YoutubeComponent {
-    searchQuery:string;
-    previousSearchQuery:string;
-    youtubeService:YoutubeService;
-    videos:YoutubeSearchResultModel[];
+    searchQuery: string;
+    previousSearchQuery: string;
+    youtubeService: YoutubeService;
+    videos: YoutubeSearchResultModel[];
 
-    constructor(youtubeService:YoutubeService,
-                private router:Router,
-                private route:ActivatedRoute) {
+    constructor(youtubeService: YoutubeService,
+                private router: Router,
+                private route: ActivatedRoute) {
         this.youtubeService = youtubeService;
         this.router = router;
 
         this.previousSearchQuery = this.route.snapshot.params['search'];
     }
 
-    updateResults(results:YoutubeSearchResultModel[]):void {
+    updateResults(results: YoutubeSearchResultModel[]): void {
         this.videos = results;
     }
 
-    onSearch(s:string):void {
+    onSearch(s: string): void {
         this.previousSearchQuery = '';
 
         this.searchQuery = s;

@@ -7,7 +7,7 @@ import {FeedbackModel} from './feedback.model';
     template: require('./feedback.component.html')
 })
 export class FeedbackComponent {
-    model:FeedbackModel;
+    model: FeedbackModel;
 
     priorities = ['high', 'medium', 'low'];
 

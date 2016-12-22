@@ -13,21 +13,21 @@ import {Http, Response} from '@angular/http';
     `
 })
 export class SimpleHttpComponent {
-    data:Object;
-    loading:boolean;
+    data: Object;
+    loading: boolean;
 
-    constructor(public http:Http) {
+    constructor(public http: Http) {
         this.http = http;
     }
 
-    loadData():void {
+    loadData(): void {
         let me = this;
 
         this.loading = true;
 
         this.http
             .request('http://jsonplaceholder.typicode.com/posts/1')
-            .subscribe(function (res:Response) {
+            .subscribe(function (res: Response) {
                 console.log('subscribe');
                 me.data = res.json();
                 me.loading = false;

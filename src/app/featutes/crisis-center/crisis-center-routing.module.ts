@@ -8,7 +8,7 @@ import {CrisisListComponent} from './crisis-list.component';
 import {CrisisDetailComponent} from './crisis-detail.component';
 
 // Route
-const crisisCenterRoutes:Routes = [
+const crisisCenterRoutes: Routes = [
     {
         path: '',
         redirectTo: '/crisis-center',

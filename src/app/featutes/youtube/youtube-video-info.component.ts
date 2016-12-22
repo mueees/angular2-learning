@@ -1,8 +1,10 @@
-import { Component, OnInit, HostBinding,
+import {
+    Component, OnInit, HostBinding,
     trigger, transition, animate,
-    style, state } from '@angular/core';
+    style, state
+} from '@angular/core';
 
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import {Router, ActivatedRoute, Params} from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 import {YoutubeService} from './youtube.service';
@@ -55,12 +57,12 @@ import {YoutubeVideoModel} from './youtube-video.model';
     ]
 })
 export class YoutubeVideoInfoComponent implements OnInit {
-    video:YoutubeVideoModel;
-    searchQuery:string;
+    video: YoutubeVideoModel;
+    searchQuery: string;
 
-    constructor(private route:ActivatedRoute,
-                private router:Router,
-                private youtubeService:YoutubeService) {
+    constructor(private route: ActivatedRoute,
+                private router: Router,
+                private youtubeService: YoutubeService) {
     }
 
     ngOnInit() {
@@ -72,10 +74,10 @@ export class YoutubeVideoInfoComponent implements OnInit {
         // alternative way
         // this.route.snapshot.params['videoId'];
         this.route.params
-            .subscribe((params:Params) => {
+            .subscribe((params: Params) => {
                 this.searchQuery = params['search'];
 
-                this.youtubeService.getVideoInfo(params['videoId']).subscribe((video:YoutubeVideoModel)=> {
+                this.youtubeService.getVideoInfo(params['videoId']).subscribe((video: YoutubeVideoModel) => {
                     this.video = video;
                 });
             });

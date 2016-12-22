@@ -8,8 +8,8 @@ import {ActivatedRoute, Router} from '@angular/router';
     `
 })
 export class CrisisDetailComponent {
-    constructor(private route:ActivatedRoute,
-                private router:Router) {
+    constructor(private route: ActivatedRoute,
+                private router: Router) {
     }
 
     toCrisisHome() {

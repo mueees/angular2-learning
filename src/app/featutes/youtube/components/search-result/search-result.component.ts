@@ -23,8 +23,8 @@ import {YoutubeSearchResultModel} from '../../youtube-search-result.model';
     `
 })
 export class SearchResultComponent {
-    video:YoutubeSearchResultModel;
-    select:EventEmitter<any> = new EventEmitter();
+    video: YoutubeSearchResultModel;
+    select: EventEmitter<any> = new EventEmitter();
 
     onSelectVideo() {
         this.select.emit(this.video.videoId);

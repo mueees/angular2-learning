@@ -2,8 +2,10 @@ import {NgModule}               from '@angular/core';
 import {RouterModule, Routes}   from '@angular/router';
 
 // Components
+
+
 // configure route
-const appRoutes:Routes = [];
+const appRoutes: Routes = [];
 
 @NgModule({
     imports: [

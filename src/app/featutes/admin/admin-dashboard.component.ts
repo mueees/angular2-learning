@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-    template:  `
+    template: `
     <p>Dashboard</p>
   `
 })
-export class AdminDashboardComponent { }
+export class AdminDashboardComponent {
+}

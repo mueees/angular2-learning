@@ -3,19 +3,19 @@ import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs';
 
 import {YoutubeSearchResultModel} from './youtube-search-result.model';
-import {YoutubeVideoModel} from './youtube-video.model.ts';
+import {YoutubeVideoModel} from './youtube-video.model';
 
 @Injectable()
 export class YoutubeService {
-    API_KEY:string;
-    API_URL:string;
-    API_SINGLE_VIDEO_URL:string;
+    API_KEY: string;
+    API_URL: string;
+    API_SINGLE_VIDEO_URL: string;
 
     constructor(// Inject simple value defined in youtube module providers
         @Inject('YOUTUBE_API_KEY') API_KEY,
         @Inject('YOUTUBE_API_URL') API_URL,
         @Inject('YOUTUBE_API_SINGLE_VIDEO_URL') API_SINGLE_VIDEO_URL,
-        private http:Http) {
+        private http: Http) {
 
         this.http = http;
         this.API_KEY = API_KEY;
@@ -23,7 +23,7 @@ export class YoutubeService {
         this.API_SINGLE_VIDEO_URL = API_SINGLE_VIDEO_URL;
     }
 
-    search(query:string):Observable <YoutubeSearchResultModel[]> {
+    search(query: string): Observable <YoutubeSearchResultModel[]> {
         let params = [
             `q=${query}`,
             `key=${this.API_KEY}`,
@@ -34,7 +34,7 @@ export class YoutubeService {
 
         let url = `${this.API_URL}?${params}`;
 
-        return this.http.get(url).map((response:Response) => {
+        return this.http.get(url).map((response: Response) => {
             return (<any>response.json()).items.map((item => {
                 return new YoutubeSearchResultModel({
                     videoId: item.id.videoId,
@@ -47,7 +47,7 @@ export class YoutubeService {
         });
     }
 
-    getVideoInfo(videoId:string):Observable<YoutubeVideoModel> {
+    getVideoInfo(videoId: string): Observable<YoutubeVideoModel> {
         let params = [
             `id=${videoId}`,
             `key=${this.API_KEY}`,
@@ -56,7 +56,7 @@ export class YoutubeService {
 
         let url = `${this.API_SINGLE_VIDEO_URL}?${params}`;
 
-        return this.http.get(url).map((response:Response) => {
+        return this.http.get(url).map((response: Response) => {
             let video = response.json().items[0];
 
             return new YoutubeVideoModel({

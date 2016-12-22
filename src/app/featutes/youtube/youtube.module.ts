@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { YoutubeRoutingModule } from './youtube-routing.module';
+import {CommonModule} from '@angular/common';
+import {YoutubeRoutingModule} from './youtube-routing.module';
+import {HttpModule} from '@angular/http';
 
 // Components
 import {YoutubeComponent} from './youtube.component';
@@ -13,7 +14,8 @@ import {YoutubeService} from './youtube.service';
 
 @NgModule({
     imports: [
-        BrowserModule,
+        HttpModule,
+        CommonModule,
         YoutubeRoutingModule
     ],
     declarations: [
@@ -21,10 +23,7 @@ import {YoutubeService} from './youtube.service';
         YoutubeVideoInfoComponent,
         SearchBoxComponent,
         SearchResultComponent
-    ],
 
-    exports: [
-        YoutubeComponent
     ],
 
     /**
