@@ -16,6 +16,8 @@ Answer: https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_
 
 3. Why we should add BrowserModule?
 
+3. Why we should add CommonModule?
+
 4. Any other Modules for another environment?
 
 5. Which browsers don't support HTML5 mode routing?
@@ -34,6 +36,10 @@ Answer: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
 10. onInit vs constructor
 
 11. What is @HostBinding decorator ?
+
+12. ActivatedRoute vs Router services
+
+13.
 
 -----------------------------
         RXJS
