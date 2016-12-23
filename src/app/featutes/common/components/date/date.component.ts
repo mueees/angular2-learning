@@ -3,8 +3,9 @@ import {Component} from "@angular/core";
 @Component({
     selector: 'date',
     template: `
-        <div>Date component</div>
+        <h1>{{title}}</h1>
     `
 })
 export class DateComponent {
+    title: string = 'Date component';
 }

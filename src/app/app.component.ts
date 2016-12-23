@@ -3,7 +3,7 @@ import {Component} from "@angular/core";
 @Component({
     selector: 'my-app',
     template: `
-  <h1>Angular Router</h1>
+  <h1>{{title}}</h1>
 
   <nav>
     <a routerLink="/admin" routerLinkActive="active">Admin</a>
@@ -15,4 +15,5 @@ import {Component} from "@angular/core";
 `
 })
 export class AppComponent {
+    title: string = 'Angular2';
 }

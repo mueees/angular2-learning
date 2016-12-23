@@ -42,6 +42,9 @@ Answer: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
 13. Could directive from module A use http service without importing it if
 module B already imported HttpModule?
 
+14. When You can and should write isolated unit tests?
+Answer: for pipes and services
+
 -----------------------------
         RXJS
 -----------------------------
