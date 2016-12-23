@@ -3,8 +3,7 @@ import {By}              from '@angular/platform-browser';
 import {DebugElement}    from '@angular/core';
 
 import {DateComponent} from './date.component';
-import {AuthService} from '../../../../auth.service'
-''
+import {AuthService} from '../../../../auth.service';
 
 describe('DateComponent', () => {
     let comp: DateComponent;
