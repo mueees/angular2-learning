@@ -1,11 +1,13 @@
 import {Component} from "@angular/core";
+import {AuthService} from '../../../../auth.service';
 
 @Component({
     selector: 'date',
-    template: `
-        <h1>{{title}}</h1>
-    `
+    template: require('./date.component.html')
 })
 export class DateComponent {
     title: string = 'Date component';
+
+    constructor(public authService: AuthService) {
+    }
 }

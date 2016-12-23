@@ -45,6 +45,30 @@ module B already imported HttpModule?
 14. When You can and should write isolated unit tests?
 Answer: for pipes and services
 
+15. Describe 'Change detection'
+http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
+- each component has own 'change detection'
+- change detection is also always performed from top to bottom for every single component,
+every single time, starting from the root component
+
+16. How to optimize 'change detection'
+Answer: use 'changeDetection': ChangeDetectionStrategy.onPush property for the component, it will compare
+object only by reference
+
+When we have the situation:
+    - parent has changeDetection property
+    - child does not have
+    - when child component change property it triggers 'detection' mechanism also in parent component
+16. How 'zone' library works?
+- wrap async code, allows to register before/hooks for the async code
+
+17. If one of our components causes any additional side effects after the first run during change detection,
+Angular will throw an error. Any examples ???
+
+18. Angular creates change detector classes at runtime! VMs can perfectly optimize this code
+// https://www.youtube.com/watch?v=jvKGQSFQf10
+
+19. What is the defference between stubs, fakes, spies and mocks?
 -----------------------------
         RXJS
 -----------------------------
