@@ -1,29 +1,25 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
+import {HttpModule} from "@angular/http";
 // Modules
-import {AppComponent} from "./app.component";
-import {YoutubeModule} from "./featutes/youtube/youtube.module";
-import {CrisisCenterModule} from "./featutes/crisis-center/crisis-center.module";
-import {AdminModule} from "./featutes/admin/admin.module";
-import {AppRoutingModule} from "./app-routing.module";
-import {LoginRoutingModule} from "./login-routing.module";
+import {AppRoutingModule} from "./app.routing";
+import {HomeModule} from "./features/home";
+import {CoreModule} from "./core";
 // Components
-import {LoginComponent} from "./login.component";
+import {AppComponent} from "./app.component";
+import {BaseComponent} from "./base.component";
 
 @NgModule({
     imports: [
         BrowserModule,
-        YoutubeModule,
-        CrisisCenterModule,
-        AdminModule,
-        LoginRoutingModule,
-        AppRoutingModule
+        HttpModule,
+        CoreModule,
+        AppRoutingModule,
+        HomeModule
     ],
-
-    providers: [],
     declarations: [
         AppComponent,
-        LoginComponent
+        BaseComponent
     ],
     bootstrap: [AppComponent]
 })
