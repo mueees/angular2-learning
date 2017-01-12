@@ -4,7 +4,6 @@ import {HttpModule} from "@angular/http";
 // Modules
 import {AppRoutingModule} from "./app.routing";
 import {HomeModule} from "./features/home";
-import {CoreModule} from "./core";
 // Components
 import {AppComponent} from "./app.component";
 import {BaseComponent} from "./base.component";
@@ -13,7 +12,6 @@ import {BaseComponent} from "./base.component";
     imports: [
         BrowserModule,
         HttpModule,
-        CoreModule,
         AppRoutingModule,
         HomeModule
     ],
