@@ -7,6 +7,9 @@ import {ButtonComponent} from "./button.component";
     ],
     declarations: [
         ButtonComponent
+    ],
+    entryComponents: [
+        ButtonComponent
     ]
 })
 export class ButtonModule {

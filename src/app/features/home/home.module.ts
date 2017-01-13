@@ -5,6 +5,8 @@ import {ButtonModule} from "../../components/button";
 import {TabsModule} from "../../components/tabs";
 import {HighlightModule} from "../../directives/highlight";
 import {TooltipModule} from "../../directives/tooltip";
+import {DynamicRendererModule} from "../../components/dynamic-renderer";
+import {DummyModule} from "../../components/dummy";
 
 @NgModule({
     imports: [
@@ -12,7 +14,9 @@ import {TooltipModule} from "../../directives/tooltip";
         ButtonModule,
         TabsModule,
         HighlightModule,
-        TooltipModule
+        TooltipModule,
+        DummyModule,
+        DynamicRendererModule
     ],
     exports: [],
     declarations: [HomeComponent],
