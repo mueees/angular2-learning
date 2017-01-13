@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { TabsComponent } from './tabs.component';
-import { TabComponent } from './tab.component';
+import {NgModule} from "@angular/core";
+import {CommonModule} from "@angular/common";
+import {TabsComponent} from "./tabs.component";
+import {TabComponent} from "./tab.component";
 
 @NgModule({
     imports: [
@@ -17,4 +16,5 @@ import { TabComponent } from './tab.component';
         TabsComponent
     ]
 })
-export class TabsModule { }
+export class TabsModule {
+}

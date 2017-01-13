@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from "@angular/core";
 import {HighlightDirective} from "./highlight.directive";
 
 @NgModule({
@@ -10,4 +10,5 @@ import {HighlightDirective} from "./highlight.directive";
         HighlightDirective
     ]
 })
-export class HighlightModule { }
+export class HighlightModule {
+}

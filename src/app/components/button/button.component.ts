@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, ElementRef, Renderer, Input} from '@angular/core';
+import {Component, ViewEncapsulation, ElementRef, Renderer, Input} from "@angular/core";
 
 @Component({
     selector: 'm-button',
